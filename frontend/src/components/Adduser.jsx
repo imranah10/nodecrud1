@@ -18,7 +18,7 @@ export const Adduser = () => {
   const handleSubmit=async(e)=>{
     e.preventDefault();
     try {
-        await axios.post('http://localhost:8080/api/create',user)
+        await axios.post('https://nodecrud1.onrender.com/api/create',user)
         console.log(user)
         toast.success('User added successfully!');
         // Reset form

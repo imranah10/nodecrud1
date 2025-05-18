@@ -11,7 +11,7 @@ export const Getuser = () => {
     useEffect(()=>{
         const fetchdata=async()=>{
             try {
-                const resp=await axios.get('http://localhost:8080/api/getall')
+                const resp=await axios.get('https://nodecrud1.onrender.com/api/getall')
                 setUsers(resp.data.data)
             } catch (error) {
                 console.log(error);
@@ -23,7 +23,7 @@ export const Getuser = () => {
     // delete user
     const deleteuser = async (id) =>{
        try {
-                const resp=await axios.delete(`http://localhost:8080/api/delete/${id}`)
+                const resp=await axios.delete(`https://nodecrud1.onrender.com/api/delete/${id}`)
                 setUsers((prevuser)=>prevuser.filter((user)=>user._id!==id))
               toast.success(resp.data.message)
             } catch (error) {

@@ -19,7 +19,7 @@ export const Edit = () => {
   useEffect(()=>{
     const fetchdata=async()=>{
         try {
-           const resp= await axios.get(`http://localhost:8080/api/getone/${id}`)
+           const resp= await axios.get(`https://nodecrud1.onrender.com/api/getone/${id}`)
             setUsers(resp.data.data)
 
         } catch (error) {
@@ -33,7 +33,7 @@ export const Edit = () => {
    const handleSubmit=async(e)=>{
     e.preventDefault();
     try {
-        await axios.put(`http://localhost:8080/api/update/${id}`,user)
+        await axios.put(`https://nodecrud1.onrender.com/api/update/${id}`,user)
         console.log(user)
         toast.success('User update successfully!');
         // Reset form
